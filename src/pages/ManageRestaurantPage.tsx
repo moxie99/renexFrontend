@@ -20,21 +20,21 @@ const ManageRestaurantPage = () => {
   const isEditing = !!restaurant;
 
   return (
-    <Tabs defaultValue="orders">
+    <Tabs defaultValue='orders'>
       <TabsList>
-        <TabsTrigger value="orders">Orders</TabsTrigger>
-        <TabsTrigger value="manage-restaurant">Manage Restaurant</TabsTrigger>
+        <TabsTrigger value='orders'>Orders</TabsTrigger>
+        <TabsTrigger value='manage-restaurant'>Manage Store</TabsTrigger>
       </TabsList>
       <TabsContent
-        value="orders"
-        className="space-y-5 bg-gray-50 p-10 rounded-lg"
+        value='orders'
+        className='space-y-5 bg-gray-50 p-10 rounded-lg'
       >
-        <h2 className="text-2xl font-bold">{orders?.length} active orders</h2>
+        <h2 className='text-2xl font-bold'>{orders?.length} active orders</h2>
         {orders?.map((order) => (
           <OrderItemCard order={order} />
         ))}
       </TabsContent>
-      <TabsContent value="manage-restaurant">
+      <TabsContent value='manage-restaurant'>
         <ManageRestaurantForm
           restaurant={restaurant}
           onSave={isEditing ? updateRestaurant : createRestaurant}
