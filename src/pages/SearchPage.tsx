@@ -76,8 +76,8 @@ const SearchPage = () => {
   }
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-5">
-      <div id="cuisines-list">
+    <div className='grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-5'>
+      <div id='cuisines-list'>
         <CuisineFilter
           selectedCuisines={searchState.selectedCuisines}
           onChange={setSelectedCuisines}
@@ -87,14 +87,14 @@ const SearchPage = () => {
           }
         />
       </div>
-      <div id="main-content" className="flex flex-col gap-5">
+      <div id='main-content' className='flex flex-col gap-5'>
         <SearchBar
           searchQuery={searchState.searchQuery}
           onSubmit={setSearchQuery}
-          placeHolder="Search by Cuisine or Restaurant Name"
+          placeHolder='Search by Product or Store Name'
           onReset={resetSearch}
         />
-        <div className="flex justify-between flex-col gap-3 lg:flex-row">
+        <div className='flex justify-between flex-col gap-3 lg:flex-row'>
           <SearchResultInfo total={results.pagination.total} city={city} />
           <SortOptionDropdown
             sortOption={searchState.sortOption}
