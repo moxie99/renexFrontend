@@ -14,9 +14,9 @@ const CuisinesSection = () => {
   return (
     <div className='space-y-2'>
       <div>
-        <h2 className='text-2xl font-bold'>Products</h2>
+        <h2 className='text-2xl font-bold'>Products Categories</h2>
         <FormDescription>
-          Select the products that your store sells
+          Select the different categories of products that your store sells
         </FormDescription>
       </div>
       <FormField
@@ -26,7 +26,11 @@ const CuisinesSection = () => {
           <FormItem>
             <div className='grid md:grid-cols-5 gap-1'>
               {cuisineList.map((cuisineItem) => (
-                <CuisineCheckbox cuisine={cuisineItem} field={field} />
+                <CuisineCheckbox
+                  key={cuisineItem}
+                  cuisine={cuisineItem}
+                  field={field}
+                />
               ))}
             </div>
             <FormMessage />
